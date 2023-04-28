@@ -10,6 +10,9 @@ COPY --from=builder /app/.venv /app/.venv
 COPY xiaogpt/ ./xiaogpt/
 COPY xiaogpt.py .
 ENV OPENAI_API_KEY=$OPENAI_API_KEY
+ENV MI_USER=$MI_USER
+ENV MI_PASS=$MI_PASS
+ENV MI_DID=$MI_DID
 ENV XDG_CONFIG_HOME=/config
 ENV XIAOGPT_PORT=9527
 # VOLUME /config
